@@ -1,0 +1,18 @@
+#log
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
+  level:
+    root: DEBUG
+    javax.activation: ERROR
+    _org: ERROR
+    sun: ERROR
+    org.apache: ERROR
+    org.springframework.beans: ERROR
+    org.springframework.boot: ERROR
+    org.springframework.core: ERROR
+    org.springframework.web.servlet.DispatcherServlet: ERROR
+    org.springframework.web.servlet.handler: ERROR
+    org.mybatis.spring.SqlSessionFactoryBean: ERROR
+    org.thymeleaf: ERROR
+    com.zaxxer: ERROR

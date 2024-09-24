@@ -1,18 +1,24 @@
-#log
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver #database 커넥션 관련된 데이터 소스 설정
+
+  jpa:
+    hibernate:
+      ddl-auto: create #자동으로 테이블은 만들어주는 모드
+    properties:
+      hibernate:
+        format_sal: true
+        show_sql: true #System.out으로 찍어주는 모드로 하단 logging과 다르며 실제 어플리케이션 구동시 System.out은 사용하지 않는다. 실제 배포시 주석처리 필요
+
+  output:
+    ansi:
+      enabled: always
+
 logging:
-  pattern:
-    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
   level:
-    root: DEBUG
-    javax.activation: ERROR
-    _org: ERROR
-    sun: ERROR
-    org.apache: ERROR
-    org.springframework.beans: ERROR
-    org.springframework.boot: ERROR
-    org.springframework.core: ERROR
-    org.springframework.web.servlet.DispatcherServlet: ERROR
-    org.springframework.web.servlet.handler: ERROR
-    org.mybatis.spring.SqlSessionFactoryBean: ERROR
-    org.thymeleaf: ERROR
-    com.zaxxer: ERROR
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+#   org.hibernate.orm.jdbc.bind: trace

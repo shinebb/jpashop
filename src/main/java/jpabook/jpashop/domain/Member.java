@@ -16,7 +16,8 @@ public class Member {
     @Id @GeneratedValue
     @Column(name = "member_id") //PK
     private Long id;
-    private String username;
+
+    private String name;
 
     @Embedded //JPA 내장타입 포함
     private Address address;

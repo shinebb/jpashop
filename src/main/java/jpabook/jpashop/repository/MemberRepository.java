@@ -14,7 +14,7 @@ public class MemberRepository {
 
     //@PersistenceContext -> 이게 정석이지만 스프링부트에서 @Autowired도 가능하게 해줌.
     //따라서 @RequiredArgsConstructor 가능
-    private EntityManager em;
+    private final EntityManager em;
 
     public void save(Member member) { //저장
         em.persist(member);

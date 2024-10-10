@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/jpashop
+    url: jdbc:h2:mem:test  #test모드(메모리모드, 메모리DB 사용) : 테스트 후 모든게 초기화 되는것이 좋기때문에, DB 안띄우고 TEST 가능
     username: sa
     password:
     driver-class-name: org.h2.Driver #database 커넥션 관련된 데이터 소스 설정
@@ -16,6 +16,8 @@ spring:
   output:
     ansi:
       enabled: always
+
+#위에 spring 하단 내용 다 없어도 됨.
 
 logging:
   level:
